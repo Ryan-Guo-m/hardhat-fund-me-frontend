@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fund Me App</title>
+        <!-- 这里的type要改为module，因为在index.js中引入了其他js模块 -->
+        <script src="./index.js" type="module"></script>
+    </head>
+    <body>
+        What's good?
+        <!-- 
+            script的type改为module后，onclick定义的函数将not define。
+            需要在调用的js文件里去设置button的事件。
+            <button id="connectButton" onclick="connect()">Connect</button>
+            <button id="fund" onclick="fund()">Fund</button> 
+        -->
+        <button id="connectButton">Connect</button>
+        <button id="balanceButton">getBalance</button>
+        <button id="withdrawButton">Withdraw</button>
+        <!--
+            for属性规定label与哪个表单元素绑定
+        -->
+        <label>ETH Amount</label>
+        <input id="ethAmount" placeholder="0.1" />
+        <button id="fundButton">Fund</button>
+    </body>
+</html>
